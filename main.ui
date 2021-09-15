@@ -7,8 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>480</height>
+    <height>446</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>480</height>
+   </size>
   </property>
   <property name="cursor">
    <cursorShape>BlankCursor</cursorShape>
@@ -17,6 +23,12 @@
    <string>圖形化控制界面</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
@@ -28,7 +40,7 @@
     </property>
     <layout class="QGridLayout" name="gridLayout">
      <property name="sizeConstraint">
-      <enum>QLayout::SetMaximumSize</enum>
+      <enum>QLayout::SetMinAndMaxSize</enum>
      </property>
      <item row="0" column="4">
       <widget class="QPushButton" name="flash">
@@ -37,6 +49,12 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>蘋方-繁</family>
+         <pointsize>24</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>閃爍燈</string>
@@ -51,6 +69,12 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>蘋方-繁</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>全亮</string>
        </property>
@@ -63,6 +87,14 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>蘋方-繁</family>
+         <pointsize>24</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
        </property>
        <property name="text">
         <string>跑馬燈</string>
@@ -77,6 +109,12 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>蘋方-繁</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>全滅</string>
        </property>
@@ -89,6 +127,12 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>蘋方-繁</family>
+         <pointsize>24</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>亮度增加</string>
@@ -103,6 +147,12 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>蘋方-繁</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>亮度減少</string>
        </property>
@@ -116,6 +166,12 @@
          <verstretch>0</verstretch>
         </sizepolicy>
        </property>
+       <property name="font">
+        <font>
+         <family>蘋方-繁</family>
+         <pointsize>24</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>關閉視窗</string>
        </property>
@@ -128,6 +184,12 @@
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>蘋方-繁</family>
+         <pointsize>24</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>關機</string>
@@ -147,7 +209,6 @@
     </rect>
    </property>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
