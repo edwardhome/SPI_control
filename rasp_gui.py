@@ -5,6 +5,7 @@ from PySide2.QtWidgets import QApplication, QMainWindow, QPushButton, QMessageBo
 from PySide2 import QtCore
 from PySide2.QtCore import Qt
 from PySide2.QtUiTools import QUiLoader
+from spi_test import Spi
 import os
 # export DISPLAY=':0.0' 利用該指令遠端ssh開啟gui程式
 class Stats(QtCore.QObject): #該類別必須為QObject，才可以調用sender
@@ -17,12 +18,14 @@ class Stats(QtCore.QObject): #該類別必須為QObject，才可以調用sender
         self.ui.stop.clicked.connect(self.stop)
         self.ui.open.clicked.connect(self.open)
         self.ui.shutdown.clicked.connect(self.shutdown)
+        self.ui.open.clicked.connect(self.open)
+        self.ui.open.clicked.connect(self.close)
     def stop(self):
         app.quit()
     def open(self):
-        pass
+        Spi.test(1)
     def close(self):
-        pass
+        Spi.test(0)
     def add(self):
         pass
     def sub(self):
@@ -33,6 +36,7 @@ class Stats(QtCore.QObject): #該類別必須為QObject，才可以調用sender
             os.system("sudo shutdown -t 60")
         else:
             pass
+Spi()
 app = QApplication([])
 window = Stats()
 window.ui.show()
