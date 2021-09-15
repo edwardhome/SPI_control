@@ -30,7 +30,7 @@ class Stats(QtCore.QObject): #該類別必須為QObject，才可以調用sender
     def shutdown(self):
         qm = QMessageBox.question(self.ui,"您確定要關機","確定嗎？",QMessageBox.Yes |QMessageBox.No, QMessageBox.Yes)
         if qm == QMessageBox.Yes:
-            os.system("shutdown -t 60")
+            os.system("sudo shutdown -t 60")
         else:
             pass
 app = QApplication([])
