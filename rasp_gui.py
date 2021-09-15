@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 from PySide2.QtWidgets import QApplication, QMainWindow, QPushButton, QMessageBox
 from PySide2 import QtCore
 from PySide2.QtCore import Qt
