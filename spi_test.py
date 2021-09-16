@@ -1,19 +1,10 @@
 import spidev
-import gpiozero
-import time
+SPI_BUS = 0
+SPI_SS = 0
 
-class Spi:
-    def __init__(self):
-        self.spi = spidev.SpiDev()
-        self.spi.open(0,0)
-        self.spi.max_speed_hz = 2400000
-    def test(self,s=1):
-        while True:
-            self.spi.xfer([0xff,0x00])
-            print("已發送SPI資料")
-            time.sleep(1)
-            if s == 0:
-                break
-            else:
-                continue
-    
+spi0 = spidev.SpiDev()
+spi0.open(SPI_BUS, SPI_SS)
+spi0.max_speed_hz = 5000
+
+msg = input("msg> ");
+spi0.xfer([ord(c) for c in msg])
